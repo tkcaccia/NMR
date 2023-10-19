@@ -1,0 +1,40 @@
+# Default NAMESPACE created by R
+# Remove the previous line if you edit this file
+
+
+useDynLib(KODAMA)
+useDynLib(KODAMA, .registration = TRUE)
+
+# Import all packages listed as Imports or Depends
+#import("stats","Rcpp")
+#exportPattern("^[[:alpha:]]+")
+
+
+
+useDynLib(KODAMA)
+importFrom(Rcpp, evalCpp)
+importFrom("graphics", "plot", "points")
+importFrom("utils", "setTxtProgressBar", "txtProgressBar")
+importFrom("stats", "aov", "summary.aov", "t.test", "p.adjust", "fisher.test", "prcomp","aggregate","quantile", "wilcox.test","cmdscale", "as.dist", "dist", "kmeans", "kruskal.test","median", "pnorm", "rnorm", "runif", "sd", "var","cor.test")
+importFrom("minerva", "mine")
+importFrom("Rtsne", "Rtsne_neighbors")
+importFrom("umap", "umap.knn", "umap","umap.defaults")
+importFrom("parallel", "makeCluster", "stopCluster")
+importFrom("doParallel", "registerDoParallel")
+importFrom("foreach", "getDoParRegistered", "getDoParWorkers")
+
+  
+S3method(print,Rtsne.config)
+S3method(print,MDS.config)
+
+exportPattern(floyd,another,vertex,
+              KODAMA,k.test,loads,PLSDACV,KNNPLSDACV,
+              mcplot,core_cpp,floyd,
+              pls.double.cv,knn.double.cv,knn.kodama,
+              pls.kodama,dinisurface,helicoid,spirals,
+              swissroll,normalization,scaling,
+              transformy,frequency_matching,
+              RQ,Rtsne_neighbors,
+              knn_Armadillo,KODAMA.matrix.parallel,
+              txtsummary,continuous.test,categorical.test,correlation.test,multi_analysis,pca,Rtsne.defaults,MDS.defaults,kabsch)
+
