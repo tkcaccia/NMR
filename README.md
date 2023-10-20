@@ -16,6 +16,6 @@ The KODAMA is avialable on https://CRAN.R-project.org/package=KODAMA.
 
 ```
 library(devtools)
-install_github("tkcaccia/KODAMAextra")
+install_github("tkcaccia/NMR")
 
 ```
